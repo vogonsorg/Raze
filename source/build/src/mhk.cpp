@@ -1,4 +1,6 @@
 
+#ifdef NO_IBUILD
+
 #include "compat.h"
 #include "build.h"
 #include "baselayer.h"
@@ -397,3 +399,5 @@ int32_t engineLoadMHK(const char *filename)
     scriptfile_close(script);
     return 0;
 }
+
+#endif

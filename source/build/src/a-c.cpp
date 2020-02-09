@@ -13,6 +13,8 @@
 #include "a.h"
 #include "pragmas.h"
 
+#ifdef NO_IBUILD
+
 #ifdef ENGINE_USING_A_C
 
 #define BITSOFPRECISION 3
@@ -726,3 +728,4 @@ void stretchhline(intptr_t p0, int32_t u, bssize_t cnt, int32_t uinc, intptr_t r
  * vim:ts=4:
  */
 
+#endif

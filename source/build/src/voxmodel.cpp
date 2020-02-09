@@ -1,5 +1,7 @@
 //--------------------------------------- VOX LIBRARY BEGINS ---------------------------------------
 
+#ifdef NO_IBUILD
+
 #ifdef USE_OPENGL
 
 #include "compat.h"
@@ -1203,3 +1205,5 @@ int32_t polymost_voxdraw(voxmodel_t *m, tspriteptr_t const tspr)
 #endif
 
 //---------------------------------------- VOX LIBRARY ENDS ----------------------------------------
+
+#endif

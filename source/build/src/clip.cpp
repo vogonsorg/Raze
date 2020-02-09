@@ -6,6 +6,8 @@
 // by Jonathon Fowler (jf@jonof.id.au)
 // by the EDuke32 team (development@voidpoint.com)
 
+#ifdef NO_IBUILD
+
 #include "a.h"
 #include "build.h"
 #include "baselayer.h"
@@ -2638,3 +2640,4 @@ restart_grand:
     return 0;
 }
 
+#endif

@@ -4,6 +4,7 @@ Ken Silverman's official web site: http://www.advsys.net/ken
 
 **************************************************************************************************/
 
+#ifdef NO_IBUILD
 
 #include "build.h"
 #include "common.h"
@@ -4698,3 +4699,5 @@ void Polymost_Startup()
     polymost_glinit();
     PolymostProcessVoxels();
 }
+
+#endif

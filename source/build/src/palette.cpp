@@ -6,6 +6,8 @@
 // by Jonathon Fowler (jf@jonof.id.au)
 // by the EDuke32 team (development@voidpoint.com)
 
+#ifdef NO_IBUILD
+
 #include "compat.h"
 #include "build.h"
 #include "engine_priv.h"
@@ -796,3 +798,5 @@ void videoFadePalette(uint8_t r, uint8_t g, uint8_t b, uint8_t offset)
 
     paletteSetFade(offset);
 }
+
+#endif

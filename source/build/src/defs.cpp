@@ -5,6 +5,8 @@
  * See the included license file "BUILDLIC.TXT" for license info.
  */
 
+#ifdef NO_IBUILD
+
 #include "build.h"
 #include "compat.h"
 #include "engine_priv.h"
@@ -3465,3 +3467,5 @@ int32_t loaddefinitionsfile(const char *fn)
 }
 
 // vim:ts=4:
+
+#endif

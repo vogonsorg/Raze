@@ -1,6 +1,8 @@
 // SDL interface layer for the Build Engine
 // Use SDL 1.2 or 2.0 from http://www.libsdl.org
 
+#ifdef NO_IBUILD
+
 #include "a.h"
 #include "build.h"
 
@@ -155,3 +157,5 @@ void videoEndDrawing(void)
 
 auto vsnprintfptr = vsnprintf;	// This is an inline in Visual Studio but we need an address for it to satisfy the MinGW compiled libraries.
 
+
+#endif

@@ -6,6 +6,8 @@
 // by Jonathon Fowler (jf@jonof.id.au)
 // by the EDuke32 team (development@voidpoint.com)
 
+#ifdef NO_IBUILD
+
 #define engine_c_
 
 #include "a.h"
@@ -10696,4 +10698,6 @@ void renderSetRollAngle(int32_t rolla)
 {
     gtang = (float)rolla * (fPI * (1.f/1024.f));
 }
+#endif
+
 #endif

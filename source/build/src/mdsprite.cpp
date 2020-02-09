@@ -1,5 +1,7 @@
 //------------------------------------- MD2/MD3 LIBRARY BEGINS -------------------------------------
 
+#ifdef NO_IBUILD
+
 #ifdef USE_OPENGL
 
 #include "compat.h"
@@ -1914,3 +1916,5 @@ static void mdfree(mdmodel_t *vm)
 #endif
 
 //---------------------------------------- MD LIBRARY ENDS  ----------------------------------------
+
+#endif

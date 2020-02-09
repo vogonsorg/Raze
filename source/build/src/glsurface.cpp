@@ -5,6 +5,8 @@
  * Copyright © 2018, Alex Dawson. All rights reserved.
  */
 
+#ifdef NO_IBUILD
+
 #include "glsurface.h"
 
 #include "baselayer.h"
@@ -78,3 +80,5 @@ void glsurface_blitBuffer()
 	GLInterface.BindTexture(0, bufferTexture, SamplerNoFilterClampXY);
 	GLInterface.Draw(DT_TRIANGLE_STRIP, FFlatVertexBuffer::PRESENT_INDEX, 4);
 }
+
+#endif

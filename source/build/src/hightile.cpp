@@ -4,6 +4,8 @@
  * See the included license file "BUILDLIC.TXT" for license info.
  */
 
+#ifdef NO_IBUILD
+
 #include "build.h"
 #include "compat.h"
 #include "hightile.h"
@@ -50,5 +52,4 @@ void hicsetpalettetint(int32_t palnum, int r, int g, int b, int sr, int sg, int 
     tint.f = effect;
 }
 
-
-
+#endif
