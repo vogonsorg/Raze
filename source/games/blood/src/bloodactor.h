@@ -296,6 +296,11 @@ class BloodLinearSpriteIterator
 	int index = 0;
 public:
 
+	void Reset()
+	{
+		index = 0;
+	}
+
 	DBloodActor* Next()
 	{
 		while (index < MAXSPRITES)
