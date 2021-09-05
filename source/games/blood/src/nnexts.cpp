@@ -465,8 +465,10 @@ void nnExtTriggerObject(int objType, int objIndex, DBloodActor* objActor, int co
             trTriggerWall(objIndex, &xwall[wall[objIndex].extra], command);
             break;
         case OBJ_SPRITE:
+            //
+            auto objActor = &bloodActors[objIndex];
             if (!objActor || !objActor->hasX()) break;
-            trTriggerSprite(objActor->GetIndex(), &objActor->x(), command);
+            trTriggerSprite(objActor, command);
             break;
     }
 
@@ -3080,7 +3082,7 @@ void useTeleportTarget(DBloodActor* sourceactor, DBloodActor* actor)
     clampSprite(actor, 0x01);
 
     if (pSource->flags & kModernTypeFlag1) // force telefrag
-        TeleFrag(pSprite->index, pSource->sectnum);
+        TeleFrag(actor, pSource->sectnum);
 
     if (pSprite->flags & kPhysGravity)
         pSprite->flags |= kPhysFalling;
